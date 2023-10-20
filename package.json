@@ -1,0 +1,11 @@
+{
+  "name": "monorepo-to-do",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "Millena Limaverde <millenalimaverde@outlook.com>",
+  "license": "MIT"
+}
