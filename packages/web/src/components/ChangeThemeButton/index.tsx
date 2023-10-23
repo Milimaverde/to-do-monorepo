@@ -9,9 +9,9 @@ export const ChangeThemeButton = () => {
   return (
     <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
       {theme === 'dark' ? (
-        <Image src="/icon-sun.svg" width={20} height={20} alt="Sun" />
+        <Image src="/icon-sun.svg" width={24} height={24} alt="Sun" />
       ) : (
-        <Image src="/icon-moon.svg" width={20} height={20} alt="Moon" />
+        <Image src="/icon-moon.svg" width={24} height={24} alt="Moon" />
       )}
     </button>
   )
