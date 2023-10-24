@@ -24,7 +24,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={josefinsans.className}
     >
-      <body className="bg-2 dark:bg-13">
+      <body className="text-base text-2 bg-2 dark:bg-13">
         <Providers>{children}</Providers>
       </body>
     </html>

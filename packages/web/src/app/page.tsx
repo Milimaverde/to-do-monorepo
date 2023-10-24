@@ -14,7 +14,7 @@ interface TodoItem {
 }
 
 const defaultTodoList = [
-  { id: 1, text: 'Limpar a caixinha da gatinha', completed: false },
+  { id: 1, text: 'Limpar a gatinha', completed: false },
   { id: 2, text: 'Fazer o almoço', completed: false },
   { id: 3, text: 'Estudar', completed: false },
   { id: 4, text: 'Lavar a louça', completed: false },
@@ -78,7 +78,7 @@ export default function Home() {
               />
             </form>
           </div>
-          <div>
+          <div className="bg-2 dark:bg-12 rounded drop-shadow-xl">
             {todos.map((todo) => (
               <TodoItem
                 key={todo.id}
@@ -87,7 +87,28 @@ export default function Home() {
                 onDelete={handleTodoDelete}
               />
             ))}
+            <div className="bg-2 dark:bg-12 flex rounded justify-between">
+              <p className="px-5 py-4 text-8 text-sm ">
+                {todos.filter((todo) => !todo.completed).length} Items left
+              </p>
+              <p>
+                <button
+                  onClick={() => setTodos([])}
+                  className="px-5 py-4 text-8 text-sm "
+                >
+                  Clear Completed
+                </button>
+              </p>
+            </div>
           </div>
+          <div className="flex justify-between drop-shadow-xl mt-5 rounded px-14 py-4 bg-2 dark:bg-12 text-8 items-center mb-12">
+            <p>All</p>
+            <p>Active</p>
+            <p>Completed</p>
+          </div>
+        </div>
+        <div className="flex justify-center mb-16">
+          <p className="text-sm text-7">Drag and drop to reaader list</p>
         </div>
       </div>
     </>
