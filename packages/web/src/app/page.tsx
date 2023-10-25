@@ -66,15 +66,20 @@ export default function Home() {
           />
         </div>
         <div className=" mx-5 pt-10">
-          <div className="flex justify-between mb-8">
+          <div className="flex justify-between mb-5">
             <h1 className="font-bold text-2xl">T O D O</h1>
             <ChangeThemeButton />
           </div>
           <div className="mb-4">
-            <form onSubmit={handleTodoAdd}>
+            <form
+              onSubmit={handleTodoAdd}
+              className="bg-2 dark:bg-12 rounded drop-shadow-xl text-white w-full placeholder:text-sm placeholder:text-8 flex items-center gap-2 px-4"
+            >
+              <div className="form-checkbox h-5 w-5 rounded-full bg-[transparent] border-[#777A92]" />
               <input
-                className="border-black text-white border-2 w-full"
+                placeholder="Criar um novo todo..."
                 type="text"
+                className="bg-[transparent] py-3  border-none focus:outline-none focus:shadow-none focus:ring-0 outline-none w-full text-8 dark:text-9 placeholder:text-sm placeholder:text-8"
               />
             </form>
           </div>

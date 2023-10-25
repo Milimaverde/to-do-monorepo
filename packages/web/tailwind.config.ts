@@ -30,8 +30,10 @@ const config: Config = {
       12: '#25273C',
       13: '#161722',
       14: '#F8F8F8',
+      15: '#57DDFF',
+      16: '#C058F3',
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
 export default config

@@ -18,7 +18,7 @@ export const TodoItem = ({ todo, onToggle, onDelete }: TodoItemProps) => {
         type="checkbox"
         checked={todo.completed}
         onChange={() => onToggle(todo.id)}
-        className="form-checkbox rounded-full h-5 w-5"
+        className="appearance-none rounded-full w-5 h-5 border-colors-16 border-[#777A92] focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-12 checked:focus:ring-0 checked:focus:shadow-none checked:bg-gradient-to-r from-15 to-16 bg-colors-2 dark:bg-12"
       />
       <span
         className={`flex-grow ${
