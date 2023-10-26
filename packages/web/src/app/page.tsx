@@ -73,7 +73,7 @@ export default function Home() {
           <div className="mb-4">
             <form
               onSubmit={handleTodoAdd}
-              className="bg-2 dark:bg-12 rounded drop-shadow-xl text-white w-full placeholder:text-sm placeholder:text-8 flex items-center gap-2 px-4"
+              className="bg-2 dark:bg-12 rounded drop-shadow-xl text-white w-full placeholder:text-sm placeholder:text-8 flex items-center px-4 gap-1"
             >
               <div className="form-checkbox h-5 w-5 rounded-full bg-[transparent] border-[#777A92]" />
               <input
@@ -98,7 +98,11 @@ export default function Home() {
               </p>
               <p>
                 <button
-                  onClick={() => setTodos([])}
+                  onClick={() =>
+                    setTodos((prevState) =>
+                      prevState.filter((todo) => !todo.completed),
+                    )
+                  }
                   className="px-5 py-4 text-8 text-sm "
                 >
                   Clear Completed
